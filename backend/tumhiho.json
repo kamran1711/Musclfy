@@ -1,0 +1,11 @@
+
+
+
+{
+ "resultCount":1,
+ "results": [
+{"wrapperType":"track", "kind":"song", "artistId":266194090, "collectionId":1073359412, "trackId":1073359419, "artistName":"Mithoon & Arijit Singh", "collectionName":"Aashiqui 2 (Original Motion Picture Soundtrack)", "trackName":"Tum Hi Ho", "collectionCensoredName":"Aashiqui 2 (Original Motion Picture Soundtrack)", "trackCensoredName":"Tum Hi Ho", "collectionArtistName":"Mithoon, Ankit Tiwari & Jeet Gannguli", "artistViewUrl":"https://music.apple.com/us/artist/mithoon/266194090?uo=4", "collectionViewUrl":"https://music.apple.com/us/album/tum-hi-ho/1073359412?i=1073359419&uo=4", "trackViewUrl":"https://music.apple.com/us/album/tum-hi-ho/1073359412?i=1073359419&uo=4", 
+"previewUrl":"https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/61/1d/3f/611d3f53-8d7b-8455-c66a-af21f28db1cb/mzaf_3524364971696240598.plus.aac.p.m4a", "artworkUrl30":"https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/bb/23/ee/bb23eeed-0c35-4f1d-2b11-485622777ae4/8902894353007_cover.jpg/30x30bb.jpg", "artworkUrl60":"https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/bb/23/ee/bb23eeed-0c35-4f1d-2b11-485622777ae4/8902894353007_cover.jpg/60x60bb.jpg", "artworkUrl100":"https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/bb/23/ee/bb23eeed-0c35-4f1d-2b11-485622777ae4/8902894353007_cover.jpg/100x100bb.jpg", "collectionPrice":8.99, "trackPrice":0.99, "releaseDate":"2013-03-16T07:00:00Z", "collectionExplicitness":"notExplicit", "trackExplicitness":"notExplicit", "discCount":1, "discNumber":1, "trackCount":11, "trackNumber":1, "trackTimeMillis":261974, "country":"USA", "currency":"USD", "primaryGenreName":"Bollywood", "isStreamable":true}]
+}
+
+

@@ -1,0 +1,11 @@
+
+
+
+{
+ "resultCount":1,
+ "results": [
+{"wrapperType":"track", "kind":"song", "artistId":67896299, "collectionId":966956751, "trackId":966956762, "artistName":"Patrick Watson", "collectionName":"Love Songs for Robots", "trackName":"Bollywood", "collectionCensoredName":"Love Songs for Robots", "trackCensoredName":"Bollywood", "artistViewUrl":"https://music.apple.com/us/artist/patrick-watson/67896299?uo=4", "collectionViewUrl":"https://music.apple.com/us/album/bollywood/966956751?i=966956762&uo=4", "trackViewUrl":"https://music.apple.com/us/album/bollywood/966956751?i=966956762&uo=4", 
+"previewUrl":"https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/18/33/a8/1833a83b-478e-389e-34eb-b4b7b2e460fe/mzaf_3397382175130368690.plus.aac.p.m4a", "artworkUrl30":"https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/99/8c/e0/998ce014-c7a8-e4e2-1f5d-0d92150c09cd/887828036066.png/30x30bb.jpg", "artworkUrl60":"https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/99/8c/e0/998ce014-c7a8-e4e2-1f5d-0d92150c09cd/887828036066.png/60x60bb.jpg", "artworkUrl100":"https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/99/8c/e0/998ce014-c7a8-e4e2-1f5d-0d92150c09cd/887828036066.png/100x100bb.jpg", "collectionPrice":9.99, "trackPrice":1.29, "releaseDate":"2015-05-08T12:00:00Z", "collectionExplicitness":"notExplicit", "trackExplicitness":"notExplicit", "discCount":1, "discNumber":1, "trackCount":9, "trackNumber":3, "trackTimeMillis":378947, "country":"USA", "currency":"USD", "primaryGenreName":"Alternative", "isStreamable":true}]
+}
+
+

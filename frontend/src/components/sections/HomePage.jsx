@@ -129,7 +129,7 @@ const HomePage = ({
                 isActive={isPlaying && continuePlayingSongs[0]?.title === song.title}
                 onClick={() => {
                   if (song.audioUrl) {
-                    playDirectSong(song);
+                    playDirectSong(song, hindiSongs);
                   } else {
                     searchAndPlaySong(`${song.title} ${song.artist}`);
                   }
@@ -160,7 +160,7 @@ const HomePage = ({
                 isActive={isPlaying && continuePlayingSongs[0]?.title === song.title}
                 onClick={() => {
                   if (song.audioUrl) {
-                    playDirectSong(song);
+                    playDirectSong(song, extendedTeluguSongs);
                   } else {
                     searchAndPlaySong(`${song.title} ${song.artist}`);
                   }
@@ -280,7 +280,7 @@ const HomePage = ({
                   isActive={isPlaying && continuePlayingSongs[0]?.title === song.title}
                   onClick={() => {
                     if (song.audioUrl) {
-                      playDirectSong(song);
+                      playDirectSong(song, hindiSongs);
                     } else {
                       searchAndPlaySong(`${song.title} ${song.artist}`);
                     }
@@ -316,7 +316,7 @@ const HomePage = ({
                   isActive={isPlaying && continuePlayingSongs[0]?.title === song.title}
                   onClick={() => {
                     if (song.audioUrl) {
-                      playDirectSong(song);
+                      playDirectSong(song, extendedTeluguSongs);
                     } else {
                       searchAndPlaySong(`${song.title} ${song.artist}`);
                     }

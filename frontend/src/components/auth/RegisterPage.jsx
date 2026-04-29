@@ -26,7 +26,7 @@ const RegisterPage = () => {
       {/* Header */}
       <header className="absolute top-0 left-0 w-full p-8 flex justify-between items-center z-20">
         <div className="text-cyan-400 font-bold text-xl tracking-tighter flex items-center gap-2">
-          Musicfy
+          Muscify
         </div>
         <div className="flex items-center gap-8">
           <button className="text-xs font-bold uppercase tracking-widest text-gray-400 hover:text-white transition-colors">Help Center</button>

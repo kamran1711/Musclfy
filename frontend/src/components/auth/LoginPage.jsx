@@ -27,7 +27,7 @@ const LoginPage = () => {
       {/* Header */}
       <header className="absolute top-0 left-0 w-full p-8 flex justify-between items-center z-20">
         <div className="text-cyan-400 font-bold text-xl tracking-tighter flex items-center gap-2">
-          Musicfy
+          Muscify
         </div>
         <div className="flex items-center gap-8">
           <button className="text-xs font-bold uppercase tracking-widest text-gray-400 hover:text-white transition-colors">Help Center</button>
@@ -59,7 +59,7 @@ const LoginPage = () => {
       {/* Login Card */}
       <div className="relative z-10 w-full max-w-[480px] p-10 rounded-[40px] bg-[#0c141d]/80 backdrop-blur-2xl border border-white/5 shadow-2xl mt-12">
         <div className="text-center mb-10">
-          <h1 className="text-4xl font-bold mb-2">Welcome to Musicfy</h1>
+          <h1 className="text-4xl font-bold mb-2">Welcome to Muscify</h1>
           <p className="text-gray-400 text-sm uppercase tracking-widest font-medium">Your Luminous Music Curator</p>
         </div>
 
@@ -140,14 +140,14 @@ const LoginPage = () => {
           </div>
 
           <p className="mt-10 text-sm text-gray-500">
-            Don't have an account? <Link to="/register" className="text-orange-400 hover:text-orange-300 font-bold transition-colors">Create a Musicfy Profile</Link>
+            Don't have an account? <Link to="/register" className="text-orange-400 hover:text-orange-300 font-bold transition-colors">Create a Muscify Profile</Link>
           </p>
         </div>
       </div>
 
       {/* Footer Links */}
       <div className="absolute bottom-10 left-10 text-[10px] text-gray-600 uppercase tracking-widest font-medium">
-        © 2024 Musicfy. The Luminous Curator Experience.
+        © 2024 Muscify. The Luminous Curator Experience.
       </div>
       <div className="absolute bottom-10 right-10 flex gap-6 text-[10px] text-gray-600 uppercase tracking-widest font-medium">
         <button className="hover:text-white">Privacy</button>

@@ -58,10 +58,15 @@ export const useAudioPlayer = () => {
   const updateAudioSource = (audioUrl, forcePlay = false) => {
     const audio = audioRef.current;
     if (audio && audioUrl) {
-      audio.src = audioUrl;
-      audio.load();
+      // Check if the source is already set to prevent double loading
+      if (!audio.src || !audio.src.includes(audioUrl)) {
+        audio.src = audioUrl;
+        audio.load();
+      }
       if (isPlaying || forcePlay) {
-        audio.play().catch(console.error);
+        audio.play().catch((err) => {
+          console.error('Play interrupted or failed:', err);
+        });
       }
     }
   };

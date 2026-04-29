@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import '../../styles/Musicfy.css';
+import '../../styles/Muscify.css';
 
 const IntroPage = () => {
   const navigate = useNavigate();
@@ -23,13 +23,13 @@ const IntroPage = () => {
           <div className="logo-glow"></div>
           <img 
             src="/logo_premium.png" 
-            alt="Musicfy Logo" 
+            alt="Muscify Logo" 
             className="intro-logo"
           />
         </div>
         
         <div className="text-content">
-          <h1 className="intro-title">Musicfy</h1>
+          <h1 className="intro-title">Muscify</h1>
           <p className="intro-subtitle">Tap to enter the world of immersive sound</p>
         </div>
       </div>

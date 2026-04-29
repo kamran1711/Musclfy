@@ -9,7 +9,7 @@ import { useMusicAPI } from '../hooks/useMusicAPI';
 import { useAuth } from '../context/AuthContext';
 import { getTruncatedArtist, formatTime } from '../utils/musicUtils';
 import { useLocation } from 'react-router-dom';
-import '../styles/Musicfy.css';
+import '../styles/Muscify.css';
 
 export default function PlayerLayout() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -484,7 +484,7 @@ export default function PlayerLayout() {
 
   return (
     <div className="min-h-screen bg-[#0a0e14] text-white font-sans relative overflow-x-hidden">
-      <div className="fixed inset-0 z-0 musicfy-background" />
+      <div className="fixed inset-0 z-0 muscify-background" />
 
       <Sidebar onSettingsClick={() => setIsSettingsOpen(true)} />
 

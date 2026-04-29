@@ -24,7 +24,7 @@ function App() {
     const isAuthPage = location.pathname === '/login' || location.pathname === '/register';
     if (isAuthPage) return <div className="min-h-screen bg-[#050b14]" />; // Don't show intro when already on login/register
 
-    const hasStoredUser = localStorage.getItem('musicfyUser');
+    const hasStoredUser = localStorage.getItem('muscifyUser');
     if (hasStoredUser) {
       return <div className="min-h-screen bg-[#050b14]" />;
     }

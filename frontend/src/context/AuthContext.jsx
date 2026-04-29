@@ -10,13 +10,13 @@ export const AuthProvider = ({ children }) => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    const storedUser = localStorage.getItem('musicfyUser');
+    const storedUser = localStorage.getItem('muscifyUser');
     if (storedUser) {
       try {
         setUser(JSON.parse(storedUser));
       } catch (e) {
         console.error('Failed to parse stored user', e);
-        localStorage.removeItem('musicfyUser');
+        localStorage.removeItem('muscifyUser');
       }
     }
     setLoading(false);
@@ -40,7 +40,7 @@ export const AuthProvider = ({ children }) => {
         throw new Error(data.message || 'Login failed');
       }
 
-      localStorage.setItem('musicfyUser', JSON.stringify(data));
+      localStorage.setItem('muscifyUser', JSON.stringify(data));
       setUser(data);
       return data;
     } catch (err) {
@@ -79,7 +79,7 @@ export const AuthProvider = ({ children }) => {
   };
 
   const logout = () => {
-    localStorage.removeItem('musicfyUser');
+    localStorage.removeItem('muscifyUser');
     setUser(null);
   };
 

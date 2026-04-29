@@ -324,7 +324,7 @@ const RadioPage = ({ currentSongIndex, isPlaying, playSong, playDirectSong, song
 
               <div className="space-y-4">
                 <h1 className="text-6xl md:text-8xl font-black tracking-tighter text-white leading-none">
-                  Musicfy <span className="text-cyan-400">Live</span>
+                  Muscify <span className="text-cyan-400">Live</span>
                 </h1>
                 <p className="text-xl text-slate-400 max-w-lg leading-relaxed">
                   Experience crystal clear audio from the world's most premium radio broadcasters. Your global soundscape, curated.

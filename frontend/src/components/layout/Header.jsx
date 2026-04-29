@@ -64,7 +64,7 @@ const Header = ({ searchQuery, setSearchQuery, handleSearch, isLoading }) => {
               <div className="absolute top-full right-0 mt-3 w-56 rounded-3xl bg-[#0f1721] border border-white/10 shadow-2xl overflow-hidden animate-in fade-in slide-in-from-top-2">
                 <div className="p-4 border-b border-white/5 bg-white/5">
                   <p className="text-xs font-bold text-cyan-400 uppercase tracking-widest mb-1">Signed in as</p>
-                  <p className="text-sm font-semibold truncate text-white">{user?.name || 'Musicfy Listener'}</p>
+                  <p className="text-sm font-semibold truncate text-white">{user?.name || 'Muscify Listener'}</p>
                   <p className="text-[10px] text-slate-500 truncate">{user?.email}</p>
                 </div>
                 <div className="p-2">

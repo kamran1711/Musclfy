@@ -9,9 +9,9 @@ import MusicPage from './sections/MusicPage';
 import { useAudioPlayer } from '../hooks/useAudioPlayer';
 import { useMusicAPI } from '../hooks/useMusicAPI';
 import { getTruncatedArtist, formatTime } from '../utils/musicUtils';
-import '../styles/Musicfy.css';
+import '../styles/Muscify.css';
 
-export default function MusicfyPlayer() {
+export default function MuscifyPlayer() {
   const [activeNavIndex, setActiveNavIndex] = useState(0);
   const [searchQuery, setSearchQuery] = useState('');
   const [apiSongs, setApiSongs] = useState(null);
@@ -26,7 +26,17 @@ export default function MusicfyPlayer() {
   const [playlistNotice, setPlaylistNotice] = useState('');
   const [activeRadio, setActiveRadio] = useState(null);
 
-  const { isLoading, fetchAllSongs } = useMusicAPI();
+  const { isLoading, fetchAllSongs, fetchItunesSongs } = useMusicAPI();
+  const [pendingPlayIndex, setPendingPlayIndex] = useState(null);
+
+  useEffect(() => {
+    if (pendingPlayIndex !== null) {
+      if (pendingPlayIndex >= 0 && pendingPlayIndex < songs.length) {
+        playSong(pendingPlayIndex);
+      }
+      setPendingPlayIndex(null);
+    }
+  }, [songs, pendingPlayIndex]);
 
   const {
     isPlaying,
@@ -200,6 +210,26 @@ export default function MusicfyPlayer() {
     }
   };
 
+  const playDirectSong = (song, playlistContext = null) => {
+    if (playlistContext && playlistContext.length > 0) {
+      setApiSongs(playlistContext);
+      const index = playlistContext.findIndex(s => s.title === song.title);
+      setPendingPlayIndex(index !== -1 ? index : 0);
+    } else {
+      setApiSongs([song]);
+      setPendingPlayIndex(0);
+    }
+  };
+
+  const searchAndPlaySong = async (query) => {
+    setSearchQuery(query);
+    const results = await fetchAllSongs(query);
+    if (results && results.length > 0) {
+      setApiSongs(results);
+      setPendingPlayIndex(0);
+    }
+  };
+
   // Toggle like for current song
   const toggleLike = () => {
     setLikedSongs(prev => {
@@ -316,7 +346,7 @@ export default function MusicfyPlayer() {
       return;
     }
 
-    setCurrentSongIndex(nextIndex);
+    playSong(nextIndex);
   };
 
   const handlePrevSong = () => {
@@ -334,7 +364,7 @@ export default function MusicfyPlayer() {
       prevIndex = currentSongIndex === 0 ? songs.length - 1 : currentSongIndex - 1;
     }
 
-    setCurrentSongIndex(prevIndex);
+    playSong(prevIndex);
   };
 
   useEffect(() => {
@@ -355,8 +385,7 @@ export default function MusicfyPlayer() {
     if (index < 0 || index >= songs.length) return;
 
     const song = songs[index];
-    setCurrentSongIndex(index);
-
+    
     if (!song.audioUrl) {
       if (song.trackUrl) {
         const externalUrl = song.trackUrl.startsWith('//') ? `https:${song.trackUrl}` : song.trackUrl;
@@ -369,12 +398,24 @@ export default function MusicfyPlayer() {
     }
 
     setIsPlaying(true);
-
+    
     const audio = audioRef.current;
-    if (audio && song) {
-      audio.src = song.audioUrl;
-      audio.load();
-      audio.play().catch(console.error);
+    if (audio) {
+      if (currentSongIndex === index) {
+        audio.currentTime = 0;
+        audio.play().catch(console.error);
+      } else {
+        // Ensure synchronous loading and playing to prevent browser autoplay blocking
+        audio.src = song.audioUrl;
+        audio.load();
+        const playPromise = audio.play();
+        if (playPromise !== undefined) {
+          playPromise.catch(console.error);
+        }
+        setCurrentSongIndex(index);
+      }
+    } else {
+      setCurrentSongIndex(index);
     }
   };
 
@@ -390,7 +431,10 @@ export default function MusicfyPlayer() {
             currentSongIndex={currentSongIndex}
             isPlaying={isPlaying}
             playSong={playSong}
+            playDirectSong={playDirectSong}
+            searchAndPlaySong={searchAndPlaySong}
             fetchAllSongs={fetchAllSongs}
+            fetchItunesSongs={fetchItunesSongs}
           />
         );
 
@@ -448,7 +492,7 @@ export default function MusicfyPlayer() {
   return (
     <div className="min-h-screen bg-[#0a0e14] text-white font-sans relative overflow-x-hidden">
       {/* Background */}
-      <div className="fixed inset-0 z-0 musicfy-background" />
+      <div className="fixed inset-0 z-0 muscify-background" />
 
       <Sidebar activeNavIndex={activeNavIndex} setActiveNavIndex={setActiveNavIndex} />
 

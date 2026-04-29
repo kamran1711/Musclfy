@@ -11,7 +11,7 @@ const SettingsModal = ({ isOpen, onClose }) => {
         <div className="p-8 flex items-center justify-between border-b border-white/5">
           <div>
             <h2 className="text-3xl font-bold text-white mb-1">Settings</h2>
-            <p className="text-slate-400 text-sm">Personalize your Musicfy experience</p>
+            <p className="text-slate-400 text-sm">Personalize your Muscify experience</p>
           </div>
           <button 
             onClick={onClose}
